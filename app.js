@@ -78,6 +78,13 @@ app.get('/api/users', (req, res) => {
   });
 });
 
+// Add this route to your server
+app.get('/api/config', (req, res) => {
+    res.json({
+        openRouteApiKey: process.env.OPENROUTE_API_KEY
+    });
+});
+
 // Use environment variable for port
 const PORT = process.env.PORT || 3000;
 
